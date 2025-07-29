@@ -1,0 +1,155 @@
+{
+  "description": "遊戲自動化配置示例",
+  "settings": {
+    "target_window": "遊戲視窗名稱",
+    "human_like_mode": true,
+    "anti_detection": true,
+    "operation_delay": {
+      "min": 0.05,
+      "max": 0.2
+    }
+  },
+  "macros": {
+    "basic_attack": {
+      "description": "基本攻擊連招",
+      "actions": [
+        {
+          "type": "key",
+          "keys": ["q"],
+          "description": "技能1"
+        },
+        {
+          "type": "wait",
+          "duration": 0.1
+        },
+        {
+          "type": "key", 
+          "keys": ["w"],
+          "description": "技能2"
+        },
+        {
+          "type": "wait",
+          "duration": 0.2
+        },
+        {
+          "type": "click",
+          "x": 400,
+          "y": 300,
+          "button": "left",
+          "description": "點擊目標"
+        }
+      ]
+    },
+    "ultimate_combo": {
+      "description": "終極連招",
+      "actions": [
+        {
+          "type": "key",
+          "keys": ["r"],
+          "description": "大招"
+        },
+        {
+          "type": "wait",
+          "duration": 0.5
+        },
+        {
+          "type": "key",
+          "keys": ["q"]
+        },
+        {
+          "type": "wait", 
+          "duration": 0.1
+        },
+        {
+          "type": "key",
+          "keys": ["w"]
+        },
+        {
+          "type": "wait",
+          "duration": 0.1
+        },
+        {
+          "type": "key",
+          "keys": ["e"]
+        }
+      ]
+    }
+  },
+  "pixel_monitors": {
+    "health_bar": {
+      "x": 100,
+      "y": 50,
+      "color": "#FF0000",
+      "description": "血量監控"
+    },
+    "mana_bar": {
+      "x": 100,
+      "y": 70,
+      "color": "#0000FF", 
+      "description": "魔力監控"
+    },
+    "skill_cooldown": {
+      "x": 200,
+      "y": 500,
+      "color": "#FFFFFF",
+      "description": "技能冷卻監控"
+    }
+  },
+  "auto_actions": {
+    "health_potion": {
+      "trigger": {
+        "type": "pixel_color",
+        "x": 100,
+        "y": 50,
+        "color": "#800000",
+        "description": "血量低於50%時使用血瓶"
+      },
+      "action": {
+        "type": "key",
+        "keys": ["1"]
+      }
+    },
+    "mana_potion": {
+      "trigger": {
+        "type": "pixel_color", 
+        "x": 100,
+        "y": 70,
+        "color": "#000080",
+        "description": "魔力低於30%時使用魔瓶"
+      },
+      "action": {
+        "type": "key",
+        "keys": ["2"]
+      }
+    }
+  },
+  "rapid_actions": {
+    "fast_click": {
+      "x": 300,
+      "y": 300,
+      "clicks": 10,
+      "interval": 0.05,
+      "description": "快速點擊攻擊"
+    },
+    "skill_spam": {
+      "key": "space",
+      "count": 5,
+      "interval": 0.1,
+      "description": "技能連發"
+    }
+  },
+  "safety": {
+    "emergency_stop": {
+      "key": "esc",
+      "description": "緊急停止鍵"
+    },
+    "pause_detection": {
+      "pixel": {
+        "x": 50,
+        "y": 50,
+        "color": "#FFFF00"
+      },
+      "description": "檢測到暫停畫面時停止操作"
+    }
+  }
+}

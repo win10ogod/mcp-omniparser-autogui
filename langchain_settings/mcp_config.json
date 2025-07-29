@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "omniparser_autogui_mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "omniparser-autogui-mcp"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "OCR_LANG": "japan"
+      }
+    }
+  }
+}
