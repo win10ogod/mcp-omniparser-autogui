@@ -1,4 +1,4 @@
-# omniparser-autogui-mcp
+# mcp-omniparser-autogui
 
 （[日本語版はこちら](README_ja.md)）
 
@@ -91,7 +91,7 @@ Each OmniParser model has a different license ([reference](https://github.com/mi
 1. Please do the following:
 
 ```
-git clone --recursive https://github.com/NON906/omniparser-autogui-mcp.git
+git clone --recursive https://github.com/win10ogod/mcp-omniparser-autogui.git
 cd omniparser-autogui-mcp
 uv sync
 set OCR_LANG=en
@@ -110,9 +110,9 @@ uv run download_models.py
       "command": "uv",
       "args": [
         "--directory",
-        "D:\\CLONED_PATH\\omniparser-autogui-mcp",
+        "D:\\CLONED_PATH\\mcp-omniparser-autogui",
         "run",
-        "omniparser-autogui-mcp"
+        "mcp-omniparser-autogui"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8",
@@ -123,7 +123,7 @@ uv run download_models.py
 }
 ```
 
-(Replace ``D:\\CLONED_PATH\\omniparser-autogui-mcp`` with the directory you cloned.)
+(Replace ``D:\\CLONED_PATH\\mcp-omniparser-autogui`` with the directory you cloned.)
 
 ``env`` allows for the following additional configurations:
 
