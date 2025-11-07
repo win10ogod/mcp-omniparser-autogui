@@ -1,4 +1,4 @@
-# mcp-omniparser-autogui
+# omniparser-autogui-mcp
 
 （[日本語版はこちら](README_ja.md)）
 
@@ -30,6 +30,7 @@ Confirmed on Windows.
 - **Region Screenshots** - Capture specific screen areas
 - **Multi-monitor Support** - Work across multiple displays
 - **Focus Control** - Automatic window activation
+- **Per‑monitor DPI Awareness** - Consistent coordinates on high DPI setups
 
 ### 📋 Available MCP Tools
 
@@ -41,12 +42,17 @@ Confirmed on Windows.
 - `omniparser_drags()` - Element-based dragging
 - `omniparser_write()` - Text input with element targeting
 - `omniparser_scroll()` - Basic scrolling
+- `scroll_advanced()` - Directional scroll at a point
+- `scroll_region()` - Scroll centered on a specific region
+- `scroll_window()` - Scroll within the active/target window (center or offset)
+- `scroll_by_id()` - Scroll at element center by parsed ID
 
 #### Coordinate-Based Operations (New)
 - `mouse_click_coordinate()` - Precise coordinate clicking
 - `mouse_move_coordinate()` - Smooth mouse movement
 - `mouse_drag_coordinate()` - Coordinate-based dragging
 - `get_mouse_position()` - Current mouse position
+- `drag_from_to()` - Alias to drag from one point to another
 
 #### Advanced Keyboard (New)
 - `keyboard_type_text()` - Human-like text input
@@ -73,6 +79,9 @@ Confirmed on Windows.
 - `switch_to_window()` - Change active window
 - `get_screen_size()` - Screen dimensions
 - `take_screenshot_region()` - Partial screenshots
+- `window_resize(width, height, x?, y?)` - Resize and optionally move the active/target window
+- `window_move(x, y)` - Move active/target window to position
+- `window_maximize()` / `window_restore()` - Window state controls
 
 #### Utilities (New)
 - `create_predefined_macro()` - Quick macro templates
@@ -91,7 +100,7 @@ Each OmniParser model has a different license ([reference](https://github.com/mi
 1. Please do the following:
 
 ```
-git clone --recursive https://github.com/win10ogod/mcp-omniparser-autogui.git
+git clone --recursive https://github.com/NON906/omniparser-autogui-mcp.git
 cd omniparser-autogui-mcp
 uv sync
 set OCR_LANG=en
@@ -110,9 +119,9 @@ uv run download_models.py
       "command": "uv",
       "args": [
         "--directory",
-        "D:\\CLONED_PATH\\mcp-omniparser-autogui",
+        "D:\\CLONED_PATH\\omniparser-autogui-mcp",
         "run",
-        "mcp-omniparser-autogui"
+        "omniparser-autogui-mcp"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8",
@@ -123,7 +132,7 @@ uv run download_models.py
 }
 ```
 
-(Replace ``D:\\CLONED_PATH\\mcp-omniparser-autogui`` with the directory you cloned.)
+(Replace ``D:\\CLONED_PATH\\omniparser-autogui-mcp`` with the directory you cloned.)
 
 ``env`` allows for the following additional configurations:
 
