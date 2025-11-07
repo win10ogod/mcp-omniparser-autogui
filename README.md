@@ -1,4 +1,4 @@
-# omniparser-autogui-mcp
+# mcp-omniparser-autogui
 
 （[日本語版はこちら](README_ja.md)）
 
@@ -100,8 +100,8 @@ Each OmniParser model has a different license ([reference](https://github.com/mi
 1. Please do the following:
 
 ```
-git clone --recursive https://github.com/NON906/omniparser-autogui-mcp.git
-cd omniparser-autogui-mcp
+git clone --recursive https://github.com/win10ogod/mcp-omniparser-autogui.git
+cd mcp-omniparser-autogui
 uv sync
 set OCR_LANG=en
 uv run download_models.py
@@ -115,13 +115,13 @@ uv run download_models.py
 ```claude_desktop_config.json
 {
   "mcpServers": {
-    "omniparser_autogui_mcp": {
+    "mcp-omniparser-autogui": {
       "command": "uv",
       "args": [
         "--directory",
-        "D:\\CLONED_PATH\\omniparser-autogui-mcp",
+        "D:\\CLONED_PATH\\mcp-omniparser-autogui",
         "run",
-        "omniparser-autogui-mcp"
+        "mcp-omniparser-autogui"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8",
@@ -132,7 +132,7 @@ uv run download_models.py
 }
 ```
 
-(Replace ``D:\\CLONED_PATH\\omniparser-autogui-mcp`` with the directory you cloned.)
+(Replace ``D:\\CLONED_PATH\\mcp-omniparser-autogui`` with the directory you cloned.)
 
 ``env`` allows for the following additional configurations:
 
@@ -157,5 +157,6 @@ Usually, they are not necessary.
 ## Usage Examples
 
 - Search for "MCP server" in the on-screen browser.
+
 
 etc.
